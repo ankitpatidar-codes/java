@@ -1,0 +1,42 @@
+class Bankaccount{
+    private int balance ;
+
+public int  getbalance(){
+    return balance;
+}
+public void setbalance(){
+    this.balance = balance;
+}
+public void deposite(int amount){
+    balance = balance + amount;
+    System.out.println("₹ "+ amount + " deposite successfully");
+   // System.out.println("Your amount was deposite successfully");
+}
+public void withdraw(int amount){
+    if(amount <= balance){
+        balance = balance - amount;
+        System.out.println("₹ "+ amount + " Withdraw was successfully" );
+
+    } else {
+        System.out.println("Insufficient balance ");
+    }
+
+}
+
+}
+
+public class Encapsulation {
+
+    static void main(String[] args) {
+        Bankaccount b1 = new Bankaccount();
+        b1.deposite(500);
+        b1.deposite(500);
+        b1.withdraw(400);
+
+        System.out.println("Current balance ₹  "+ b1.getbalance());
+
+
+    }
+}
+
+
